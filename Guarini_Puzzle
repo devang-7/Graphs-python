@@ -1,3 +1,5 @@
+#Configurations means a placement of two white and two black knight on this board. Represented as a string of length eight. Its i-th symbol is equal to "*", if there is no knight in the i-th cell of the board. It is equal to "B" or "W", if the i-th cell contains a black or white knight, respectively.
+
 import networkx as nx
 import itertools as it
 
@@ -41,3 +43,9 @@ for node in G.nodes():
 print(nx.number_of_nodes(G))
 print(nx.number_of_edges(G))
 print(nx.number_connected_components(G))                    
+
+assert "W*B**W*B" in nx.node_connected_component(G, "W*W**B*B")
+assert "B*B**W*W" in nx.node_connected_component(G, "W*W**B*B")
+assert "W*B**B*W" not in nx.node_connected_component(G, "W*W**B*B")
+
+print(" -> ".join(nx.shortest_path(G, "W*W**B*B", "B*B**W*W")))
