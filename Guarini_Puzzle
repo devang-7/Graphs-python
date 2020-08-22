@@ -1,4 +1,4 @@
-#Configurations means a placement of two white and two black knight on this board. Represented as a string of length eight. Its i-th symbol is equal to "*", if there is no knight in the i-th cell of the board. It is equal to "B" or "W", if the i-th cell contains a black or white knight, respectively.
+#Configuration means a placement of two white and two black knight on this board. Represented as a string of length eight. Its i-th symbol is equal to "*", if there is no knight in the i-th cell of the board. It is equal to "B" or "W", if the i-th cell contains a black or white knight, respectively.
 
 import networkx as nx
 import itertools as it
